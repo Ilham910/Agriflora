@@ -1,0 +1,228 @@
+﻿namespace Agriflora.Views
+{
+    partial class HomePageFlorist
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            tbSearch = new TextBox();
+            TabSemua = new TabPage();
+            dgvSemua = new DataGridView();
+            tabBunga = new TabPage();
+            dgvBunga = new DataGridView();
+            tabBibit = new TabPage();
+            dgvBibit = new DataGridView();
+            btnSearch = new Button();
+            flowLayoutPanelCard = new FlowLayoutPanel();
+            btnTambah = new Button();
+            menuStrip1 = new MenuStrip();
+            kategoriToolStripMenuItem = new ToolStripMenuItem();
+            semua = new ToolStripMenuItem();
+            bunga = new ToolStripMenuItem();
+            bibit = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)dgvSemua).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBunga).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBibit).BeginInit();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // tbSearch
+            // 
+            tbSearch.BackColor = Color.Pink;
+            tbSearch.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbSearch.Location = new Point(201, 151);
+            tbSearch.Name = "tbSearch";
+            tbSearch.Size = new Size(423, 43);
+            tbSearch.TabIndex = 2;
+            tbSearch.TextChanged += tbSearch_TextChanged;
+            tbSearch.KeyDown += tbSearch_KeyDown;
+            // 
+            // TabSemua
+            // 
+            TabSemua.Location = new Point(0, 0);
+            TabSemua.Name = "TabSemua";
+            TabSemua.Size = new Size(200, 100);
+            TabSemua.TabIndex = 0;
+            // 
+            // dgvSemua
+            // 
+            dgvSemua.ColumnHeadersHeight = 29;
+            dgvSemua.Location = new Point(0, 0);
+            dgvSemua.Name = "dgvSemua";
+            dgvSemua.RowHeadersWidth = 51;
+            dgvSemua.Size = new Size(240, 150);
+            dgvSemua.TabIndex = 0;
+            // 
+            // tabBunga
+            // 
+            tabBunga.Location = new Point(0, 0);
+            tabBunga.Name = "tabBunga";
+            tabBunga.Size = new Size(200, 100);
+            tabBunga.TabIndex = 0;
+            // 
+            // dgvBunga
+            // 
+            dgvBunga.ColumnHeadersHeight = 29;
+            dgvBunga.Location = new Point(0, 0);
+            dgvBunga.Name = "dgvBunga";
+            dgvBunga.RowHeadersWidth = 51;
+            dgvBunga.Size = new Size(240, 150);
+            dgvBunga.TabIndex = 0;
+            // 
+            // tabBibit
+            // 
+            tabBibit.Location = new Point(0, 0);
+            tabBibit.Name = "tabBibit";
+            tabBibit.Size = new Size(200, 100);
+            tabBibit.TabIndex = 0;
+            // 
+            // dgvBibit
+            // 
+            dgvBibit.ColumnHeadersHeight = 29;
+            dgvBibit.Location = new Point(0, 0);
+            dgvBibit.Name = "dgvBibit";
+            dgvBibit.RowHeadersWidth = 51;
+            dgvBibit.Size = new Size(240, 150);
+            dgvBibit.TabIndex = 0;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Pink;
+            btnSearch.Location = new Point(574, 151);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(50, 43);
+            btnSearch.TabIndex = 4;
+            btnSearch.Text = "Cari";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // flowLayoutPanelCard
+            // 
+            flowLayoutPanelCard.AutoScroll = true;
+            flowLayoutPanelCard.BackColor = SystemColors.ButtonHighlight;
+            flowLayoutPanelCard.Location = new Point(207, 267);
+            flowLayoutPanelCard.Name = "flowLayoutPanelCard";
+            flowLayoutPanelCard.Size = new Size(748, 309);
+            flowLayoutPanelCard.TabIndex = 5;
+            // 
+            // btnTambah
+            // 
+            btnTambah.BackColor = Color.PaleVioletRed;
+            btnTambah.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTambah.ForeColor = SystemColors.ButtonHighlight;
+            btnTambah.Location = new Point(782, 86);
+            btnTambah.Name = "btnTambah";
+            btnTambah.Size = new Size(188, 46);
+            btnTambah.TabIndex = 9;
+            btnTambah.Text = "Tambah Produk";
+            btnTambah.UseVisualStyleBackColor = false;
+            btnTambah.Click += btnTambah_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.AutoSize = false;
+            menuStrip1.BackColor = SystemColors.ButtonHighlight;
+            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { kategoriToolStripMenuItem });
+            menuStrip1.Location = new Point(632, 151);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(186, 43);
+            menuStrip1.Stretch = false;
+            menuStrip1.TabIndex = 10;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // kategoriToolStripMenuItem
+            // 
+            kategoriToolStripMenuItem.AutoSize = false;
+            kategoriToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { semua, bunga, bibit });
+            kategoriToolStripMenuItem.Name = "kategoriToolStripMenuItem";
+            kategoriToolStripMenuItem.Size = new Size(152, 39);
+            kategoriToolStripMenuItem.Text = "Kategori";
+            // 
+            // semua
+            // 
+            semua.Name = "semua";
+            semua.Size = new Size(137, 26);
+            semua.Text = "Semua";
+            semua.Click += semua_Click;
+            // 
+            // bunga
+            // 
+            bunga.Name = "bunga";
+            bunga.Size = new Size(137, 26);
+            bunga.Text = "Bunga";
+            bunga.Click += bunga_Click;
+            // 
+            // bibit
+            // 
+            bibit.Name = "bibit";
+            bibit.Size = new Size(137, 26);
+            bibit.Text = "Bibit";
+            bibit.Click += bibit_Click;
+            // 
+            // HomePageFlorist
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.HomepageFlorist;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(982, 578);
+            Controls.Add(btnSearch);
+            Controls.Add(btnTambah);
+            Controls.Add(flowLayoutPanelCard);
+            Controls.Add(tbSearch);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Name = "HomePageFlorist";
+            Text = "HomePageFlorist";
+            ((System.ComponentModel.ISupportInitialize)dgvSemua).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBunga).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBibit).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+        private TextBox tbSearch;
+        private TabPage TabSemua;
+        private TabPage tabBunga;
+        private TabPage tabBibit;
+        private DataGridView dgvSemua;
+        private DataGridView dgvBunga;
+        private DataGridView dgvBibit;
+        private Button btnSearch;
+        private FlowLayoutPanel flowLayoutPanelCard;
+        private Button btnTambah;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem kategoriToolStripMenuItem;
+        private ToolStripMenuItem semua;
+        private ToolStripMenuItem bunga;
+        private ToolStripMenuItem bibit;
+    }
+}
