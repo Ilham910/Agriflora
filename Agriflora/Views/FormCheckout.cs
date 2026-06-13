@@ -175,10 +175,6 @@ namespace Agriflora.Views
 
             if (idPesanan > 0 && _bayar.MetodeBayar == "QRIS")
             {
-                // buka form QRIS untuk proses pembayaran
-                var formQris = new FormQris(totalAkhir, idPesanan, _pesanan);
-                formQris.ShowDialog();
-
                 MessageBox.Show(
                     $"{_bayar.GetInstruksi()}",
                     "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
