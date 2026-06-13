@@ -145,6 +145,7 @@ namespace Agriflora.Views
             lblLaporan.Name = "lblLaporan";
             lblLaporan.Size = new Size(158, 40);
             lblLaporan.TabIndex = 16;
+            lblLaporan.Click += lblLaporan_Click;
             // 
             // lblPesanan
             // 

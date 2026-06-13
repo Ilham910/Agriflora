@@ -236,6 +236,12 @@ namespace Agriflora.Views
             this.Hide();
             new FormPesananFlorist().Show();
         }
+
+        private void lblLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormLaporanFlorist().Show();
+        }
     }
 }
 

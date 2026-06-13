@@ -153,6 +153,16 @@ namespace Agriflora.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Laporan__Florist_ {
+            get {
+                object obj = ResourceManager.GetObject("Laporan (Florist)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
@@ -566,6 +576,16 @@ namespace Agriflora.Properties {
         internal static System.Drawing.Bitmap Screenshot_2026_06_12_1422501 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2026-06-12 1422501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2026_06_12_1422502 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2026-06-12 1422502", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

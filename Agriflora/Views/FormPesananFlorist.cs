@@ -131,5 +131,11 @@ namespace Agriflora.Views
             this.Hide();
             new HomePageFlorist().Show();
         }
+
+        private void lblLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormLaporanFlorist().Show();
+        }
     }
 }
