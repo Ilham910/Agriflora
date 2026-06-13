@@ -117,7 +117,6 @@ namespace Agriflora.Views
         }
 
         // ─── Tambah ─────────────────────────────────────────────
-        // Wire your Tambah button to this
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
@@ -127,7 +126,6 @@ namespace Agriflora.Views
         }
 
         // ─── Ubah ───────────────────────────────────────────────
-        //Called from each card's Ubah button
 
         private void BtnUbah_Click(int idProduk)
         {
@@ -152,7 +150,6 @@ namespace Agriflora.Views
 
 
         // ─── Hapus ──────────────────────────────────────────────
-        // Called from each card's Hapus button
 
         private void BtnHapus_Click(int idProduk, string namaProduk)
         {
@@ -226,6 +223,18 @@ namespace Agriflora.Views
         {
             _currentFilter = "bibit";
             LoadCards();
+        }
+
+        private void lblDashboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormDashboardFlorist().Show();
+        }
+
+        private void lblPesanan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormPesananFlorist().Show();
         }
     }
 }

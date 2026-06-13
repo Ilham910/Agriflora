@@ -34,10 +34,9 @@ namespace Agriflora.Views
                 pictureBoxGambar.Image = placeholder;
             }
 
-            // name x quantity
+
             lblNama.Text = $"{item.NamaProduk} x {item.Quantity}";
 
-            // price per item
             lblHarga.Text = $"{item.Harga.ToString("C0", new CultureInfo("id-ID"))}/item";
 
         }

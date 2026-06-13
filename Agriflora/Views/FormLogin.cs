@@ -84,5 +84,15 @@ namespace Agriflora.Views
             this.Hide();
             new FormRegister().Show();
         }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

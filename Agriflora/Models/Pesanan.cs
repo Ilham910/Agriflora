@@ -66,6 +66,16 @@ namespace Agriflora.Models
 
     }
 
+    public class RiwayatPesanan
+    {
+        public int IdPesanan { get; set; }
+        public string NamaPengguna { get; set; }
+        public DateTime Tanggal { get; set; }
+        public decimal TotalHarga { get; set; }
+        public string Status { get; set; }
+        public string ProdukList { get; set; }
+    }
+
     public class Pesanan
     {
         public int IdPesanan { get; set; }

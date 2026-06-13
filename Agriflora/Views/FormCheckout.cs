@@ -174,15 +174,23 @@ namespace Agriflora.Views
             int idPesanan = _pesanan.Checkout(rincianList, _keranjang.GetTotal(), "QRIS");
 
             if (idPesanan > 0 && _bayar.MetodeBayar == "QRIS")
+
             {
                 MessageBox.Show(
                     $"{_bayar.GetInstruksi()}",
                     "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // setelah pembayaran, hapus keranjang dan tutup form checkout
-                _keranjang.Clear();
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                // buka form QRIS untuk proses pembayaran
+                var formQris = new FormQris(totalAkhir, idPesanan, _pesanan);
+                var result = formQris.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    // user completed payment in FormQris
+                    _keranjang.Clear();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
             else if (idPesanan > 0)
             {

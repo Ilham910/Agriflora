@@ -135,6 +135,7 @@
             btnProfil.TabIndex = 16;
             btnProfil.Text = "Edit Profil";
             btnProfil.UseVisualStyleBackColor = false;
+            btnProfil.Click += btnProfil_Click;
             // 
             // btnLogout
             // 

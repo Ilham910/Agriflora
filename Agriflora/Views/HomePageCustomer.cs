@@ -60,7 +60,7 @@ namespace Agriflora.Views
                     break;
             }
 
-            
+
             string keyword = tbSearch.Text.Trim().ToLower();
             if (!string.IsNullOrWhiteSpace(keyword))
             {
@@ -97,7 +97,7 @@ namespace Agriflora.Views
 
             if (list.Count == 0)
             {
-                
+
                 var lblEmpty = new Label
                 {
                     Text = "Tidak ada produk ditemukan.",
@@ -115,18 +115,10 @@ namespace Agriflora.Views
                 var card = new CustomerProdukCard();
                 card.SetProdukInfo(produk, _placeholder);
 
-                // listen to card button events
-                //card.UbahClicked += (s, e) => BtnUbah_Click(card.IdProduk);
-                //card.HapusClicked += (s, e) => BtnHapus_Click(card.IdProduk, produk.NamaProduk);
                 card.MasukClicked += (s, e) => BtnMasuk_Click(produk);
                 card.DetailBungaClicked += (s, e) => BtnDetailBunga_Click(produk);
 
-
                 flowLayoutPanel1.Controls.Add(card);
-
-                //var card = BuildCard(produk);
-                //flowLayoutPanel1.Controls.Add(card);
-
 
             }
 
@@ -211,6 +203,20 @@ namespace Agriflora.Views
         {
             this.Hide();
             new FormEditProfilCust(AppSession.CurrentUser).Show();
+        }
+
+        private void btnBeranda_Click(object sender, EventArgs e)
+        {
+            if (panelMenu.Visible == true)
+            {
+                panelMenu.Visible = false;
+            }
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormRiwayatPesanan().Show();
         }
     }
 }

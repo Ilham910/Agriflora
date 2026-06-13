@@ -139,7 +139,7 @@
             // lblVoucherStatus
             // 
             lblVoucherStatus.AutoSize = true;
-            lblVoucherStatus.Location = new Point(5, 79);
+            lblVoucherStatus.Location = new Point(5, 75);
             lblVoucherStatus.Name = "lblVoucherStatus";
             lblVoucherStatus.Size = new Size(102, 20);
             lblVoucherStatus.TabIndex = 7;

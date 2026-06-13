@@ -71,14 +71,14 @@ namespace Agriflora.Views
 
             _controller.UpdateQuantity(_item.Produk.IdProduk, _item.Quantity + 1);
             RefreshQty();
-            OnQuantityChanged?.Invoke(this, e); // tell parent to update total
+            OnQuantityChanged?.Invoke(this, e); // bilang ke FormCheckout supaya update total harga
         }
 
         private void btnKurang_Click(object sender, EventArgs e)
         {
             if (_item.Quantity <= 1)
             {
-                // quantity will hit 0 → remove immediately
+                // jika quantity 1 dan user klik minus, berarti hapus item dari keranjang
                 _controller.HapusItem(_item.Produk.IdProduk);
                 OnHapus?.Invoke(this, e);
             }

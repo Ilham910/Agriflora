@@ -61,7 +61,7 @@
             // pictureBoxTambahGambar
             // 
             pictureBoxTambahGambar.BackColor = SystemColors.ControlLight;
-            pictureBoxTambahGambar.Location = new Point(484, 49);
+            pictureBoxTambahGambar.Location = new Point(353, 49);
             pictureBoxTambahGambar.Name = "pictureBoxTambahGambar";
             pictureBoxTambahGambar.Size = new Size(239, 162);
             pictureBoxTambahGambar.TabIndex = 0;
@@ -74,7 +74,7 @@
             // 
             // btUploadTambahGambar
             // 
-            btUploadTambahGambar.Location = new Point(532, 118);
+            btUploadTambahGambar.Location = new Point(396, 113);
             btUploadTambahGambar.Name = "btUploadTambahGambar";
             btUploadTambahGambar.Size = new Size(145, 29);
             btUploadTambahGambar.TabIndex = 1;
@@ -224,7 +224,7 @@
             // 
             // btSimpan
             // 
-            btSimpan.Location = new Point(662, 403);
+            btSimpan.Location = new Point(482, 403);
             btSimpan.Name = "btSimpan";
             btSimpan.Size = new Size(126, 35);
             btSimpan.TabIndex = 7;
@@ -284,7 +284,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImageLayout = ImageLayout.Zoom;
+            ClientSize = new Size(612, 450);
             Controls.Add(tbStok);
             Controls.Add(tbHarga);
             Controls.Add(label9);

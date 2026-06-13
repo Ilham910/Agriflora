@@ -14,11 +14,11 @@ namespace Agriflora.Views
 {
     public partial class FormQris : Form
     {
-        private TimeSpan timeRemaining = TimeSpan.FromHours(24);
 
         private decimal _total;
         private PesananController _controller;
         private int _idPesanan;
+        private DateTime _deadline;
 
         // ── ABSTRACT: pakai PembayaranQris (subclass konkret) ────
         //    bukan Pembayaran langsung, karena Pembayaran sudah abstract
@@ -30,54 +30,25 @@ namespace Agriflora.Views
             _idPesanan = idPesanan;
             _controller = controller;
             InitializeComponent();
-            TimeLoad();
+            LoadDeadline();
 
             // ── ABSTRACT: GetInstruksi() dari PembayaranQris ─────
             //    ditampilkan langsung ke user di form
             lblInstruksi.Text = _pembayaran.GetInstruksi();
         }
 
-
-        private void TimeLoad()
+        private void LoadDeadline()
         {
-            // 1. Display the initial 24:00:00 time immediately
-            DisplayTime();
+            // fetch the saved deadline from DB
+            var saved = _controller.GetDeadlineBayar(_idPesanan);
 
-            // 2. Configure the timer interval to 1 second (1000 milliseconds)
-            countdownTimer.Interval = 1000;
+            // if for some reason it's null, fall back to 24h from now
+            _deadline = saved.HasValue ? saved.Value : DateTime.Now.AddHours(24);
 
-            // 3. Attach the Tick event handler
-            countdownTimer.Tick += CountdownTimer_Tick;
-
-            // 4. Start the timer automatically
-            countdownTimer.Start();
+            // display as fixed date-time, no ticking
+            lblDeadline.Text = _deadline.ToString("dd MMM yyyy, HH:mm");
         }
 
-        // This method runs every 1 second
-        private void CountdownTimer_Tick(object sender, EventArgs e)
-        {
-            if (timeRemaining.TotalSeconds > 0)
-            {
-                // Subtract 1 second from the remaining time
-                timeRemaining = timeRemaining.Subtract(TimeSpan.FromSeconds(1));
-
-                // Update the label display
-                DisplayTime();
-            }
-            else
-            {
-                // Stop the timer when it reaches 00:00:00
-                countdownTimer.Stop();
-                MessageBox.Show("Time is up!", "Timer Finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        // Helper method to format and display the time
-        private void DisplayTime()
-        {
-            // Formats the time as HH:mm:ss (e.g., 23:59:59)
-            lblCountdown.Text = timeRemaining.ToString(@"hh\:mm\:ss");
-        }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
@@ -102,6 +73,15 @@ namespace Agriflora.Views
 
         private void btnSelesai_Click(object sender, EventArgs e)
         {
+            if (DateTime.Now > _deadline)
+            {
+                MessageBox.Show(
+                    "Waktu pembayaran telah habis. Pesanan ini tidak dapat dibayar lagi.",
+                    "Waktu Habis", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                return;
+            }
+
             // ── ABSTRACT: Validasi() → di PembayaranQris cek SudahUploadBukti
             //    kalau pakai PembayaranCash, Validasi() selalu return true
             if (!_pembayaran.Validasi())
@@ -125,6 +105,11 @@ namespace Agriflora.Views
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void lblDeadline_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

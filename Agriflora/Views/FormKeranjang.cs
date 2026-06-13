@@ -118,5 +118,11 @@ namespace Agriflora.Views
             this.Hide();
             new FormStatusPesanan().Show();
         }
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormEditProfilCust(AppSession.CurrentUser).Show();
+        }
     }
 }

@@ -206,6 +206,7 @@
             btnRiwayat.TabIndex = 15;
             btnRiwayat.Text = "Riwayat Pesanan";
             btnRiwayat.UseVisualStyleBackColor = false;
+            btnRiwayat.Click += btnRiwayat_Click;
             // 
             // btnStatus
             // 
@@ -231,6 +232,7 @@
             btnBeranda.TabIndex = 13;
             btnBeranda.Text = "Beranda";
             btnBeranda.UseVisualStyleBackColor = false;
+            btnBeranda.Click += btnBeranda_Click;
             // 
             // btnKeranjang
             // 

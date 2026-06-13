@@ -34,8 +34,10 @@
             // 
             // btnLogin
             // 
+            btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(749, 23);
+            btnLogin.MaximumSize = new Size(102, 41);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(102, 41);
             btnLogin.TabIndex = 0;
@@ -45,10 +47,12 @@
             // 
             // btnRegister
             // 
+            btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnRegister.BackColor = Color.PaleVioletRed;
             btnRegister.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = SystemColors.ButtonHighlight;
             btnRegister.Location = new Point(857, 23);
+            btnRegister.MaximumSize = new Size(113, 41);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(113, 41);
             btnRegister.TabIndex = 2;

@@ -13,7 +13,6 @@ namespace Agriflora.Controllers
     {
         // ─── PRODUK (base) ───────────────────────────────────────────
 
-        // inserts into produk table, returns the generated id_produk
         private int InsertProduk(Produk produk, NpgsqlConnection conn)
         {
             using var cmd = new NpgsqlCommand(

@@ -108,10 +108,6 @@ namespace Agriflora.Views
                 return;
             }
 
-            //bool pass = _pengguna.Password == tbPassBaru.Text.Trim();
-
-            //_pengguna.Password = tbPassBaru.Text.Trim();
-
             try
             {
                 _pengguna.Password = tbPassBaru.Text.Trim();

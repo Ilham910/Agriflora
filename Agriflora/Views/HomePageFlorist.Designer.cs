@@ -43,6 +43,9 @@
             semua = new ToolStripMenuItem();
             bunga = new ToolStripMenuItem();
             bibit = new ToolStripMenuItem();
+            lblDashboard = new Label();
+            lblPesanan = new Label();
+            lblLaporan = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvSemua).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvBunga).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvBibit).BeginInit();
@@ -184,6 +187,35 @@
             bibit.Text = "Bibit";
             bibit.Click += bibit_Click;
             // 
+            // lblDashboard
+            // 
+            lblDashboard.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDashboard.Image = Properties.Resources.Screenshot_2026_06_12_142250;
+            lblDashboard.Location = new Point(5, 157);
+            lblDashboard.Name = "lblDashboard";
+            lblDashboard.Size = new Size(174, 40);
+            lblDashboard.TabIndex = 11;
+            lblDashboard.Click += lblDashboard_Click;
+            // 
+            // lblPesanan
+            // 
+            lblPesanan.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPesanan.Image = Properties.Resources.Screenshot_2026_06_12_142231;
+            lblPesanan.Location = new Point(0, 245);
+            lblPesanan.Name = "lblPesanan";
+            lblPesanan.Size = new Size(163, 40);
+            lblPesanan.TabIndex = 12;
+            lblPesanan.Click += lblPesanan_Click;
+            // 
+            // lblLaporan
+            // 
+            lblLaporan.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLaporan.Image = Properties.Resources.Screenshot_2026_06_12_142239;
+            lblLaporan.Location = new Point(0, 290);
+            lblLaporan.Name = "lblLaporan";
+            lblLaporan.Size = new Size(158, 40);
+            lblLaporan.TabIndex = 13;
+            // 
             // HomePageFlorist
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -191,6 +223,9 @@
             BackgroundImage = Properties.Resources.HomepageFlorist;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
+            Controls.Add(lblLaporan);
+            Controls.Add(lblPesanan);
+            Controls.Add(lblDashboard);
             Controls.Add(btnSearch);
             Controls.Add(btnTambah);
             Controls.Add(flowLayoutPanelCard);
@@ -224,5 +259,8 @@
         private ToolStripMenuItem semua;
         private ToolStripMenuItem bunga;
         private ToolStripMenuItem bibit;
+        private Label lblDashboard;
+        private Label lblPesanan;
+        private Label lblLaporan;
     }
 }

@@ -31,11 +31,12 @@
             components = new System.ComponentModel.Container();
             openFileDialog1 = new OpenFileDialog();
             btnUpload = new Button();
-            lblCountdown = new Label();
+            lblDeadline = new Label();
             countdownTimer = new System.Windows.Forms.Timer(components);
             pictureBoxGambar = new PictureBox();
             btnSelesai = new Button();
             lblInstruksi = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGambar).BeginInit();
             SuspendLayout();
             // 
@@ -53,16 +54,17 @@
             btnUpload.UseVisualStyleBackColor = true;
             btnUpload.Click += btnUpload_Click;
             // 
-            // lblCountdown
+            // lblDeadline
             // 
-            lblCountdown.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCountdown.ForeColor = Color.MediumVioletRed;
-            lblCountdown.Image = Properties.Resources.Screenshot_2026_06_07_140237;
-            lblCountdown.Location = new Point(599, 242);
-            lblCountdown.Name = "lblCountdown";
-            lblCountdown.Size = new Size(138, 30);
-            lblCountdown.TabIndex = 1;
-            lblCountdown.TextAlign = ContentAlignment.MiddleCenter;
+            lblDeadline.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDeadline.ForeColor = Color.MediumVioletRed;
+            lblDeadline.Image = Properties.Resources.Screenshot_2026_06_11_2336311;
+            lblDeadline.Location = new Point(503, 242);
+            lblDeadline.Name = "lblDeadline";
+            lblDeadline.Size = new Size(331, 30);
+            lblDeadline.TabIndex = 1;
+            lblDeadline.TextAlign = ContentAlignment.MiddleCenter;
+            lblDeadline.Click += lblDeadline_Click;
             // 
             // pictureBoxGambar
             // 
@@ -97,6 +99,19 @@
             lblInstruksi.Text = "Instruksi";
             lblInstruksi.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Image = Properties.Resources.Screenshot_2026_06_11_233631;
+            label1.Location = new Point(503, 199);
+            label1.Name = "label1";
+            label1.Size = new Size(331, 28);
+            label1.TabIndex = 5;
+            label1.Text = "Selesaikan Pembayaran Sebelum :";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // FormQris
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -104,25 +119,28 @@
             BackgroundImage = Properties.Resources.Bayar_Qris;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
+            Controls.Add(label1);
             Controls.Add(lblInstruksi);
             Controls.Add(btnSelesai);
             Controls.Add(pictureBoxGambar);
-            Controls.Add(lblCountdown);
+            Controls.Add(lblDeadline);
             Controls.Add(btnUpload);
             Name = "FormQris";
             Text = "FormQris";
             ((System.ComponentModel.ISupportInitialize)pictureBoxGambar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private OpenFileDialog openFileDialog1;
         private Button btnUpload;
-        private Label lblCountdown;
+        private Label lblDeadline;
         private System.Windows.Forms.Timer countdownTimer;
         private PictureBox pictureBoxGambar;
         private Button btnSelesai;
         private Label lblInstruksi;
+        private Label label1;
     }
 }

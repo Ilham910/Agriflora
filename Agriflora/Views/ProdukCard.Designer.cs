@@ -53,25 +53,25 @@
             // 
             // lblNama
             // 
-            lblNama.AutoSize = true;
             lblNama.BackColor = SystemColors.ButtonHighlight;
             lblNama.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNama.Location = new Point(78, 13);
             lblNama.Name = "lblNama";
-            lblNama.Size = new Size(57, 40);
+            lblNama.Size = new Size(132, 40);
             lblNama.TabIndex = 1;
-            lblNama.Text = "Bunga\r\nMawar";
+            lblNama.Text = "Bunga Mawar";
+            lblNama.TextAlign = ContentAlignment.MiddleLeft;
             lblNama.Click += label1_Click;
             // 
             // lblHarga
             // 
-            lblHarga.AutoSize = true;
             lblHarga.BackColor = SystemColors.ButtonHighlight;
-            lblHarga.Location = new Point(284, 17);
+            lblHarga.Location = new Point(284, 14);
             lblHarga.Name = "lblHarga";
-            lblHarga.Size = new Size(52, 40);
+            lblHarga.Size = new Size(76, 40);
             lblHarga.TabIndex = 2;
-            lblHarga.Text = "Rp\r\n16.000";
+            lblHarga.Text = "Rp.16.000";
+            lblHarga.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // btnUbah
             // 
@@ -98,7 +98,7 @@
             // 
             lblJenis.AutoSize = true;
             lblJenis.BackColor = SystemColors.ButtonHighlight;
-            lblJenis.Location = new Point(180, 22);
+            lblJenis.Location = new Point(207, 23);
             lblJenis.Name = "lblJenis";
             lblJenis.Size = new Size(51, 20);
             lblJenis.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             lblKuantitas.AutoSize = true;
             lblKuantitas.BackColor = SystemColors.ButtonHighlight;
-            lblKuantitas.Location = new Point(366, 23);
+            lblKuantitas.Location = new Point(366, 24);
             lblKuantitas.Name = "lblKuantitas";
             lblKuantitas.Size = new Size(25, 20);
             lblKuantitas.TabIndex = 6;

@@ -108,5 +108,15 @@ namespace Agriflora.Views
                 this.Close();
             }
         }
+
+        private void pictureBoxGambar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDeskripsi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

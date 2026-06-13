@@ -41,6 +41,7 @@
             tbEmail.Name = "tbEmail";
             tbEmail.Size = new Size(344, 41);
             tbEmail.TabIndex = 3;
+            tbEmail.TextChanged += tbEmail_TextChanged;
             tbEmail.KeyDown += tbEmail_KeyDown;
             // 
             // tbPassword
@@ -90,6 +91,7 @@
             Controls.Add(lblDaftar);
             Name = "FormLogin";
             Text = "FormLogin";
+            Load += FormLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
