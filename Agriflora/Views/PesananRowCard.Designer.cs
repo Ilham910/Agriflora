@@ -105,14 +105,15 @@
             // 
             // btnAksi
             // 
-            btnAksi.BackColor = SystemColors.ButtonHighlight;
-            btnAksi.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAksi.BackColor = SystemColors.MenuHighlight;
+            btnAksi.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAksi.Location = new Point(655, 12);
             btnAksi.Name = "btnAksi";
             btnAksi.Size = new Size(87, 34);
             btnAksi.TabIndex = 10;
             btnAksi.Text = "Siap Diambil";
             btnAksi.TextAlign = ContentAlignment.MiddleCenter;
+            btnAksi.Click += btnAksi_Click_1;
             // 
             // PesananRowCard
             // 

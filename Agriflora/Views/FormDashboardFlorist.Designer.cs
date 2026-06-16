@@ -43,6 +43,7 @@ namespace Agriflora.Views
             lblPesanan = new Label();
             lblDashboard = new Label();
             flowPesananTerbaru = new SmoothFlowPanel();
+            lblLihatPesanan = new Label();
             SuspendLayout();
             // 
             // flowHampirHabis
@@ -98,12 +99,13 @@ namespace Agriflora.Views
             // lblPemasukan
             // 
             lblPemasukan.BackColor = SystemColors.ButtonHighlight;
-            lblPemasukan.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPemasukan.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPemasukan.Location = new Point(796, 164);
             lblPemasukan.Name = "lblPemasukan";
             lblPemasukan.Size = new Size(171, 43);
             lblPemasukan.TabIndex = 5;
             lblPemasukan.Text = "Rp. 6,42 Jt";
+            lblPemasukan.TextAlign = ContentAlignment.MiddleLeft;
             lblPemasukan.Click += lblPemasukan_Click;
             // 
             // lblInfoMasuk
@@ -176,6 +178,16 @@ namespace Agriflora.Views
             flowPesananTerbaru.Size = new Size(267, 83);
             flowPesananTerbaru.TabIndex = 17;
             // 
+            // lblLihatPesanan
+            // 
+            lblLihatPesanan.BackColor = SystemColors.ButtonHighlight;
+            lblLihatPesanan.Image = Properties.Resources.Screenshot_2026_06_16_135514;
+            lblLihatPesanan.Location = new Point(657, 365);
+            lblLihatPesanan.Name = "lblLihatPesanan";
+            lblLihatPesanan.Size = new Size(250, 28);
+            lblLihatPesanan.TabIndex = 18;
+            lblLihatPesanan.Click += lblLihatPesanan_Click;
+            // 
             // FormDashboardFlorist
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -183,6 +195,7 @@ namespace Agriflora.Views
             BackgroundImage = Properties.Resources.Homepage_Florist;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
+            Controls.Add(lblLihatPesanan);
             Controls.Add(flowPesananTerbaru);
             Controls.Add(lblLaporan);
             Controls.Add(lblPesanan);
@@ -218,5 +231,6 @@ namespace Agriflora.Views
         private Label lblPesanan;
         private Label lblDashboard;
         private SmoothFlowPanel flowPesananTerbaru;
+        private Label lblLihatPesanan;
     }
 }

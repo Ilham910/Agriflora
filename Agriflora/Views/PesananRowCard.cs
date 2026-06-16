@@ -41,31 +41,6 @@ namespace Agriflora.Views
             btnAksi.Enabled = pesanan.Status != Status.Selesai;
         }
 
-        private void btnAksi_Click(object sender, EventArgs e)
-        {
-            Status? next = GetNextStatus(_pesanan.Status);
-            if (next == null) return;
-
-            var konfirmasi = MessageBox.Show(
-                $"Update pesanan #AGF-{_pesanan.IdPesanan} ke '{FormatStatus(next.Value)}'?",
-                "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (konfirmasi == DialogResult.Yes)
-            {
-                bool ok = _controller.UpdateStatus(_pesanan, next.Value);
-                if (ok)
-                {
-                    lblStatus.Text = FormatStatus(next.Value);
-                    lblStatus.ForeColor = GetStatusColor(next.Value);
-                    btnAksi.Text = GetNextStatusLabel(next.Value);
-                    btnAksi.Enabled = next.Value != Status.Selesai;
-                    _pesanan.Status = next.Value;
-
-                    AksiClicked?.Invoke(this, e);
-                }
-            }
-        }
-
         private Status? GetNextStatus(Status current)
         {
             switch (current)
@@ -113,6 +88,31 @@ namespace Agriflora.Views
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAksi_Click_1(object sender, EventArgs e)
+        {
+            Status? next = GetNextStatus(_pesanan.Status);
+            if (next == null) return;
+
+            var konfirmasi = MessageBox.Show(
+                $"Update pesanan #AGF-{_pesanan.IdPesanan} ke '{FormatStatus(next.Value)}'?",
+                "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (konfirmasi == DialogResult.Yes)
+            {
+                bool ok = _controller.UpdateStatus(_pesanan, next.Value);
+                if (ok)
+                {
+                    lblStatus.Text = FormatStatus(next.Value);
+                    lblStatus.ForeColor = GetStatusColor(next.Value);
+                    btnAksi.Text = GetNextStatusLabel(next.Value);
+                    btnAksi.Enabled = next.Value != Status.Selesai;
+                    _pesanan.Status = next.Value;
+
+                    AksiClicked?.Invoke(this, e);
+                }
+            }
         }
     }
 }

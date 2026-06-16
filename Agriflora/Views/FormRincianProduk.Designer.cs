@@ -47,8 +47,11 @@
             btnKeranjang = new Button();
             lblSubtotal = new Label();
             label6 = new Label();
+            panelBunga = new Panel();
+            lblWarna = new Label();
             PanelBibit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGambar).BeginInit();
+            panelBunga.SuspendLayout();
             SuspendLayout();
             // 
             // lblNama
@@ -169,7 +172,7 @@
             PanelBibit.BackColor = Color.LavenderBlush;
             PanelBibit.Controls.Add(lblJenisTanaman);
             PanelBibit.Controls.Add(label4);
-            PanelBibit.Location = new Point(392, 198);
+            PanelBibit.Location = new Point(393, 205);
             PanelBibit.Name = "PanelBibit";
             PanelBibit.Size = new Size(445, 59);
             PanelBibit.TabIndex = 13;
@@ -256,6 +259,28 @@
             label6.TabIndex = 18;
             label6.Text = "Subtotal";
             // 
+            // panelBunga
+            // 
+            panelBunga.BackColor = Color.LavenderBlush;
+            panelBunga.Controls.Add(lblWarna);
+            panelBunga.Location = new Point(509, 205);
+            panelBunga.Name = "panelBunga";
+            panelBunga.Size = new Size(445, 59);
+            panelBunga.TabIndex = 19;
+            // 
+            // lblWarna
+            // 
+            lblWarna.AutoSize = true;
+            lblWarna.BackColor = Color.LavenderBlush;
+            lblWarna.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblWarna.ForeColor = SystemColors.ActiveCaptionText;
+            lblWarna.Location = new Point(142, 15);
+            lblWarna.Name = "lblWarna";
+            lblWarna.Size = new Size(73, 28);
+            lblWarna.TabIndex = 15;
+            lblWarna.Text = "Warna";
+            lblWarna.Click += label5_Click;
+            // 
             // FormRincianProduk
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -263,6 +288,7 @@
             BackgroundImage = Properties.Resources.Rincian_Produk;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
+            Controls.Add(panelBunga);
             Controls.Add(label6);
             Controls.Add(lblSubtotal);
             Controls.Add(btnKeranjang);
@@ -284,6 +310,8 @@
             PanelBibit.ResumeLayout(false);
             PanelBibit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGambar).EndInit();
+            panelBunga.ResumeLayout(false);
+            panelBunga.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -308,5 +336,7 @@
         private Button btnKeranjang;
         private Label lblSubtotal;
         private Label label6;
+        private Panel panelBunga;
+        private Label lblWarna;
     }
 }

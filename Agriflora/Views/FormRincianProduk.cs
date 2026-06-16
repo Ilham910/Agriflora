@@ -54,11 +54,13 @@ namespace Agriflora.Views
             if (_produk is Bunga bunga)
             {
                 PanelBibit.Visible = false;
+                panelBunga.Visible = true;
                 tbDeskripsi.Text = bunga.DeskripsiBunga;
             }
             else if (_produk is Bibit bibit)
             {
                 PanelBibit.Visible = true;
+                panelBunga.Visible = false;
                 lblJenisTanaman.Text = bibit.JenisTanaman;
                 tbDeskripsi.Text = bibit.DeskripsiBibit;
             }
@@ -131,6 +133,11 @@ namespace Agriflora.Views
         {
             this.Hide();
             new FormKeranjang().Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

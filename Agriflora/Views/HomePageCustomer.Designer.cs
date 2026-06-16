@@ -248,7 +248,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.HomePageCustomerReal;
+            BackgroundImage = Properties.Resources.Homepage_Customer;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
             Controls.Add(btnKeranjang);

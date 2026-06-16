@@ -39,9 +39,8 @@
             tbHarga = new TextBox();
             tbStok = new TextBox();
             tbJenis = new TextBox();
-            pictureBox1 = new PictureBox();
+            btnBatal = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGambar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // openFileDialog1
@@ -52,7 +51,7 @@
             // 
             pictureBoxGambar.BackColor = SystemColors.ControlLight;
             pictureBoxGambar.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBoxGambar.Location = new Point(264, 214);
+            pictureBoxGambar.Location = new Point(264, 211);
             pictureBoxGambar.Name = "pictureBoxGambar";
             pictureBoxGambar.Size = new Size(173, 175);
             pictureBoxGambar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -75,7 +74,7 @@
             btnSimpan.BackColor = Color.Green;
             btnSimpan.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSimpan.ForeColor = SystemColors.ButtonHighlight;
-            btnSimpan.Location = new Point(248, 400);
+            btnSimpan.Location = new Point(252, 400);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(181, 41);
             btnSimpan.TabIndex = 3;
@@ -93,7 +92,7 @@
             // 
             tbNama.BackColor = Color.LavenderBlush;
             tbNama.Font = new Font("Microsoft Sans Serif", 16.8000011F);
-            tbNama.Location = new Point(35, 62);
+            tbNama.Location = new Point(35, 59);
             tbNama.Name = "tbNama";
             tbNama.Size = new Size(190, 39);
             tbNama.TabIndex = 11;
@@ -101,9 +100,9 @@
             // tbDeskripsi
             // 
             tbDeskripsi.BackColor = Color.LavenderBlush;
-            tbDeskripsi.Location = new Point(31, 285);
+            tbDeskripsi.Location = new Point(29, 213);
             tbDeskripsi.Name = "tbDeskripsi";
-            tbDeskripsi.Size = new Size(220, 110);
+            tbDeskripsi.Size = new Size(220, 122);
             tbDeskripsi.TabIndex = 12;
             tbDeskripsi.Text = "";
             tbDeskripsi.TextChanged += tbDeskripsi_TextChanged;
@@ -112,7 +111,7 @@
             // 
             tbHarga.BackColor = Color.LavenderBlush;
             tbHarga.Font = new Font("Microsoft Sans Serif", 16.8000011F);
-            tbHarga.Location = new Point(35, 135);
+            tbHarga.Location = new Point(35, 132);
             tbHarga.Name = "tbHarga";
             tbHarga.Size = new Size(190, 39);
             tbHarga.TabIndex = 13;
@@ -121,7 +120,7 @@
             // 
             tbStok.BackColor = Color.LavenderBlush;
             tbStok.Font = new Font("Microsoft Sans Serif", 16.8000011F);
-            tbStok.Location = new Point(264, 138);
+            tbStok.Location = new Point(264, 135);
             tbStok.Name = "tbStok";
             tbStok.Size = new Size(190, 39);
             tbStok.TabIndex = 14;
@@ -130,30 +129,32 @@
             // 
             tbJenis.BackColor = Color.LavenderBlush;
             tbJenis.Font = new Font("Microsoft Sans Serif", 16.8000011F);
-            tbJenis.Location = new Point(264, 62);
+            tbJenis.Location = new Point(264, 59);
             tbJenis.Name = "tbJenis";
             tbJenis.Size = new Size(190, 39);
             tbJenis.TabIndex = 15;
             // 
-            // pictureBox1
+            // btnBatal
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2026_06_10_134722;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Image = Properties.Resources.Screenshot_2026_06_10_134722;
-            pictureBox1.Location = new Point(35, 180);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(190, 80);
-            pictureBox1.TabIndex = 16;
-            pictureBox1.TabStop = false;
+            btnBatal.BackColor = Color.Crimson;
+            btnBatal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBatal.ForeColor = SystemColors.ButtonHighlight;
+            btnBatal.Location = new Point(36, 401);
+            btnBatal.Name = "btnBatal";
+            btnBatal.Size = new Size(190, 41);
+            btnBatal.TabIndex = 16;
+            btnBatal.Text = "Batal";
+            btnBatal.UseVisualStyleBackColor = false;
+            btnBatal.Click += btnBatal_Click;
             // 
             // FormUpdateBibit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Screenshot_2026_06_08_0137551;
+            BackgroundImage = Properties.Resources.Screenshot_2026_06_16_135044;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(461, 450);
-            Controls.Add(pictureBox1);
+            Controls.Add(btnBatal);
             Controls.Add(tbJenis);
             Controls.Add(tbStok);
             Controls.Add(tbHarga);
@@ -166,7 +167,6 @@
             Name = "FormUpdateBibit";
             Text = "FormUpdateBibit";
             ((System.ComponentModel.ISupportInitialize)pictureBoxGambar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,6 +183,6 @@
         private TextBox tbHarga;
         private TextBox tbStok;
         private TextBox tbJenis;
-        private PictureBox pictureBox1;
+        private Button btnBatal;
     }
 }

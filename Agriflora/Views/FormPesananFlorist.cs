@@ -123,7 +123,7 @@ namespace Agriflora.Views
         private void lblPesanan_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new FormPesananFlorist().Show();
+            new FormDashboardFlorist().Show();
         }
 
         private void lblDashboard_Click(object sender, EventArgs e)

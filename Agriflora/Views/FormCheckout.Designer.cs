@@ -33,13 +33,11 @@
             radioQris = new RadioButton();
             radioCash = new RadioButton();
             btnBayar = new Button();
-            panelBunga = new Panel();
             btnPakaiVoucher = new Button();
             lblDiskon = new Label();
             lblVoucherStatus = new Label();
             tbVoucher = new TextBox();
-            label2 = new Label();
-            panelBunga.SuspendLayout();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblTotalHarga
@@ -100,25 +98,12 @@
             btnBayar.UseVisualStyleBackColor = false;
             btnBayar.Click += btnBayar_Click;
             // 
-            // panelBunga
-            // 
-            panelBunga.BackColor = SystemColors.ButtonHighlight;
-            panelBunga.Controls.Add(btnPakaiVoucher);
-            panelBunga.Controls.Add(lblDiskon);
-            panelBunga.Controls.Add(lblVoucherStatus);
-            panelBunga.Controls.Add(tbVoucher);
-            panelBunga.Controls.Add(label2);
-            panelBunga.Location = new Point(590, 317);
-            panelBunga.Name = "panelBunga";
-            panelBunga.Size = new Size(374, 130);
-            panelBunga.TabIndex = 6;
-            // 
             // btnPakaiVoucher
             // 
             btnPakaiVoucher.BackColor = Color.Green;
             btnPakaiVoucher.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPakaiVoucher.ForeColor = SystemColors.Control;
-            btnPakaiVoucher.Location = new Point(222, 98);
+            btnPakaiVoucher.Location = new Point(812, 408);
             btnPakaiVoucher.Name = "btnPakaiVoucher";
             btnPakaiVoucher.Size = new Size(149, 29);
             btnPakaiVoucher.TabIndex = 9;
@@ -128,57 +113,59 @@
             // 
             // lblDiskon
             // 
-            lblDiskon.AutoSize = true;
-            lblDiskon.Location = new Point(5, 49);
+            lblDiskon.BackColor = SystemColors.ButtonHighlight;
+            lblDiskon.Location = new Point(600, 362);
             lblDiskon.Name = "lblDiskon";
-            lblDiskon.Size = new Size(54, 20);
+            lblDiskon.Size = new Size(239, 20);
             lblDiskon.TabIndex = 8;
             lblDiskon.Text = "Diskon";
             lblDiskon.Visible = false;
             // 
             // lblVoucherStatus
             // 
-            lblVoucherStatus.AutoSize = true;
-            lblVoucherStatus.Location = new Point(5, 75);
+            lblVoucherStatus.BackColor = SystemColors.ButtonHighlight;
+            lblVoucherStatus.Location = new Point(600, 382);
             lblVoucherStatus.Name = "lblVoucherStatus";
-            lblVoucherStatus.Size = new Size(102, 20);
+            lblVoucherStatus.Size = new Size(343, 21);
             lblVoucherStatus.TabIndex = 7;
             lblVoucherStatus.Text = "StatusVoucher";
             lblVoucherStatus.Visible = false;
             // 
             // tbVoucher
             // 
-            tbVoucher.Location = new Point(93, 14);
+            tbVoucher.Location = new Point(686, 330);
             tbVoucher.Name = "tbVoucher";
             tbVoucher.Size = new Size(257, 27);
             tbVoucher.TabIndex = 6;
             // 
-            // label2
+            // label1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(5, 17);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Voucher";
+            label1.BackColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(601, 403);
+            label1.Name = "label1";
+            label1.Size = new Size(201, 21);
+            label1.TabIndex = 10;
+            label1.Visible = false;
             // 
             // FormCheckout
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Checkout;
+            BackgroundImage = Properties.Resources.Checkout1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
-            Controls.Add(panelBunga);
+            Controls.Add(label1);
+            Controls.Add(btnPakaiVoucher);
+            Controls.Add(lblVoucherStatus);
+            Controls.Add(lblDiskon);
             Controls.Add(btnBayar);
             Controls.Add(radioCash);
+            Controls.Add(tbVoucher);
             Controls.Add(radioQris);
             Controls.Add(flowLayoutPanelCheckout);
             Controls.Add(lblTotalHarga);
             Name = "FormCheckout";
             Text = "FormCheckout";
-            panelBunga.ResumeLayout(false);
-            panelBunga.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,11 +177,10 @@
         private RadioButton radioQris;
         private RadioButton radioCash;
         private Button btnBayar;
-        private Panel panelBunga;
         private Button btnPakaiVoucher;
         private Label lblDiskon;
         private Label lblVoucherStatus;
         private TextBox tbVoucher;
-        private Label label2;
+        private Label label1;
     }
 }

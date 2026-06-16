@@ -38,6 +38,7 @@
             pictureBoxGambar = new PictureBox();
             tbWarna = new TextBox();
             openFileDialog1 = new OpenFileDialog();
+            btnBatal = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGambar).BeginInit();
             SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             tbDeskripsi.BackColor = Color.LavenderBlush;
             tbDeskripsi.Location = new Point(32, 283);
             tbDeskripsi.Name = "tbDeskripsi";
-            tbDeskripsi.Size = new Size(213, 114);
+            tbDeskripsi.Size = new Size(223, 114);
             tbDeskripsi.TabIndex = 25;
             tbDeskripsi.Text = "";
             // 
@@ -83,7 +84,7 @@
             tbNama.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbNama.Location = new Point(33, 62);
             tbNama.Name = "tbNama";
-            tbNama.Size = new Size(174, 41);
+            tbNama.Size = new Size(190, 41);
             tbNama.TabIndex = 24;
             // 
             // btnSimpan
@@ -91,7 +92,7 @@
             btnSimpan.BackColor = Color.Green;
             btnSimpan.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSimpan.ForeColor = SystemColors.ButtonHighlight;
-            btnSimpan.Location = new Point(248, 399);
+            btnSimpan.Location = new Point(248, 402);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(186, 42);
             btnSimpan.TabIndex = 18;
@@ -101,7 +102,7 @@
             // 
             // btnUpload
             // 
-            btnUpload.Location = new Point(277, 281);
+            btnUpload.Location = new Point(285, 295);
             btnUpload.Name = "btnUpload";
             btnUpload.Size = new Size(142, 29);
             btnUpload.TabIndex = 17;
@@ -115,7 +116,7 @@
             pictureBoxGambar.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxGambar.Location = new Point(261, 215);
             pictureBoxGambar.Name = "pictureBoxGambar";
-            pictureBoxGambar.Size = new Size(173, 171);
+            pictureBoxGambar.Size = new Size(188, 181);
             pictureBoxGambar.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxGambar.TabIndex = 16;
             pictureBoxGambar.TabStop = false;
@@ -124,7 +125,7 @@
             // 
             tbWarna.BackColor = Color.LavenderBlush;
             tbWarna.Font = new Font("Segoe UI", 15F);
-            tbWarna.Location = new Point(33, 207);
+            tbWarna.Location = new Point(34, 207);
             tbWarna.Name = "tbWarna";
             tbWarna.Size = new Size(190, 41);
             tbWarna.TabIndex = 30;
@@ -133,13 +134,27 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnBatal
+            // 
+            btnBatal.BackColor = Color.Crimson;
+            btnBatal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBatal.ForeColor = SystemColors.ButtonHighlight;
+            btnBatal.Location = new Point(33, 403);
+            btnBatal.Name = "btnBatal";
+            btnBatal.Size = new Size(190, 41);
+            btnBatal.TabIndex = 31;
+            btnBatal.Text = "Batal";
+            btnBatal.UseVisualStyleBackColor = false;
+            btnBatal.Click += btnBatal_Click;
+            // 
             // FormUpdateBunga
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Screenshot_2026_06_08_013755;
+            BackgroundImage = Properties.Resources.Screenshot_2026_06_16_135030;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(461, 450);
+            Controls.Add(btnBatal);
             Controls.Add(tbWarna);
             Controls.Add(tbJenis);
             Controls.Add(tbStok);
@@ -169,5 +184,6 @@
         private PictureBox pictureBoxGambar;
         private TextBox tbWarna;
         private OpenFileDialog openFileDialog1;
+        private Button btnBatal;
     }
 }

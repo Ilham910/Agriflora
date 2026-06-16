@@ -118,5 +118,10 @@ namespace Agriflora.Views
         {
 
         }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

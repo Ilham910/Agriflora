@@ -44,14 +44,42 @@ namespace Agriflora.Views
             lblBulanIni.Text = bulanIni.ToString("C0", culture);
             lblInfoBulanIni.Text = infoText;
 
-            //// ── Chart ──
-            //DrawGrafik();
 
-            //// ── Produk terlaris ──
-            //LoadProdukTerlaris();
+            // ── Produk terlaris ──
+            LoadProdukTerlaris();
 
             //// ── Riwayat transaksi ──
             //LoadRiwayatTransaksi();
+        }
+
+
+        // ─── Produk Terlaris ─────────────────────────────────────
+        // flowProdukTerlaris = FlowLayoutPanel in designer
+        private void LoadProdukTerlaris()
+        {
+            flowProdukTerlaris.Controls.Clear();
+
+            var data = _controller.GetProdukTerlaris(4);
+            if (data.Count == 0) return;
+
+            int maxVal = 0;
+            foreach (var d in data) if (d.TotalTerjual > maxVal) maxVal = d.TotalTerjual;
+
+            var colors = new[]
+            {
+                Color.FromArgb(163, 60, 90),
+                Color.FromArgb(80, 160, 100),
+                Color.FromArgb(120, 80, 160),
+                Color.FromArgb(60, 120, 180)
+            };
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                var card = new ProdukTerlarisCard();
+                card.SetData(data[i].NamaProduk, data[i].TotalTerjual, maxVal, colors[i % colors.Length]);
+                card.Width = flowProdukTerlaris.Width - 4;
+                flowProdukTerlaris.Controls.Add(card);
+            }
         }
 
         private void lblLaporan_Click(object sender, EventArgs e)

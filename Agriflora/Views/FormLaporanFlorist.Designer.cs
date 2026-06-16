@@ -38,6 +38,7 @@
             lblLaporan = new Label();
             lblPesanan = new Label();
             lblDashboard = new Label();
+            flowProdukTerlaris = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // lblInfoBulanIni
@@ -146,6 +147,14 @@
             lblDashboard.TabIndex = 17;
             lblDashboard.Click += lblDashboard_Click;
             // 
+            // flowProdukTerlaris
+            // 
+            flowProdukTerlaris.BackColor = SystemColors.ButtonHighlight;
+            flowProdukTerlaris.Location = new Point(590, 278);
+            flowProdukTerlaris.Name = "flowProdukTerlaris";
+            flowProdukTerlaris.Size = new Size(373, 157);
+            flowProdukTerlaris.TabIndex = 0;
+            // 
             // FormLaporanFlorist
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -153,6 +162,7 @@
             BackgroundImage = Properties.Resources.Laporan__Florist_;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
+            Controls.Add(flowProdukTerlaris);
             Controls.Add(lblLaporan);
             Controls.Add(lblPesanan);
             Controls.Add(lblDashboard);
@@ -181,5 +191,6 @@
         private Label lblLaporan;
         private Label lblPesanan;
         private Label lblDashboard;
+        private FlowLayoutPanel flowProdukTerlaris;
     }
 }

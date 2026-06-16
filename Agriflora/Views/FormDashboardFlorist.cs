@@ -26,6 +26,8 @@ namespace Agriflora.Views
 
         public void LoadDashboard()
         {
+            var culture = new CultureInfo("id-ID");
+
             lblProdukAktif.Text = _laporan.GetTotalProdukAktif().ToString();
             lblInfoProduk.Text = $"{_laporan.GetProdukHampirHabisCount()} hampir habis stok";
 
@@ -43,10 +45,8 @@ namespace Agriflora.Views
                     : $"turun {((bulanLalu - bulanIni) / bulanLalu * 100):F0}% dari bulan lalu")
                 : "tidak ada data bulan lalu";
 
-            lblPemasukan.Text = $"Rp {bulanIni:N0}";
+            lblPemasukan.Text = bulanIni.ToString("C0", culture);
             lblInfoPemasukan.Text = infoText;
-
-
 
             // pesanan terbaru
             //LoadPesananTerbaru();
@@ -144,6 +144,12 @@ namespace Agriflora.Views
         {
             this.Hide();
             new FormLaporanFlorist().Show();
+        }
+
+        private void lblLihatPesanan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormPesananFlorist().Show();
         }
 
         //private void btnLihatPesanan_Click(object sender, EventArgs e)
