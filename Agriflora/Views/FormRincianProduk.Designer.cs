@@ -241,7 +241,7 @@
             lblSubtotal.BackColor = Color.LavenderBlush;
             lblSubtotal.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSubtotal.ForeColor = SystemColors.ActiveCaptionText;
-            lblSubtotal.Location = new Point(825, 268);
+            lblSubtotal.Location = new Point(764, 271);
             lblSubtotal.Name = "lblSubtotal";
             lblSubtotal.Size = new Size(120, 31);
             lblSubtotal.TabIndex = 17;
@@ -253,11 +253,11 @@
             label6.BackColor = Color.LavenderBlush;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(721, 270);
+            label6.Location = new Point(665, 272);
             label6.Name = "label6";
-            label6.Size = new Size(87, 28);
+            label6.Size = new Size(96, 28);
             label6.TabIndex = 18;
-            label6.Text = "Subtotal";
+            label6.Text = "Subtotal :";
             // 
             // panelBunga
             // 

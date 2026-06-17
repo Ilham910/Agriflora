@@ -20,6 +20,7 @@ namespace Agriflora.Views
         {
             InitializeComponent();
             LoadDashboard();
+            LoadUserInfo();
         }
 
 
@@ -85,31 +86,16 @@ namespace Agriflora.Views
             }
         }
 
-        private string GetNamaPengguna(int id)
+        private void LoadUserInfo()
         {
-            try
+            var user = AppSession.CurrentUser;
+            if (user != null)
             {
-                using var conn = Agriflora.Helpers.DatabaseHelper.GetConnection();
-                conn.Open();
-                using var cmd = new Npgsql.NpgsqlCommand(
-                    "SELECT nama_pengguna FROM pengguna WHERE id_pengguna = @id", conn);
-                cmd.Parameters.AddWithValue("id", id);
-                return cmd.ExecuteScalar()?.ToString() ?? "-";
+                lblNamaUser.Text = user.Nama;
+                lblEmailUser.Text = user.Email;
+                lblNoTelp.Text = user.NoTelepon;
             }
-            catch { return "-"; }
         }
-
-        //protected override void WndProc(ref Message m)
-        //{
-        //    base.WndProc(ref m);
-
-        //    // 0x0085 is WM_NCPAINT, which triggers the non-client area (borders/scrollbars) to draw
-        //    if (m.Msg == 0x0085)
-        //    {
-        //        // Hides both vertical and horizontal scroll bars for flowLayoutPanel1
-        //        ShowScrollBar(flowLayoutPanel1.Handle, SB_BOTH, false);
-        //    }
-        //}
 
 
         private void FormDashboardFlorist_Load(object sender, EventArgs e)
@@ -150,6 +136,12 @@ namespace Agriflora.Views
         {
             this.Hide();
             new FormPesananFlorist().Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new FormLogin().Show();
+            this.Close();
         }
 
         //private void btnLihatPesanan_Click(object sender, EventArgs e)

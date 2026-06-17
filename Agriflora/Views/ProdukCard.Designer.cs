@@ -106,9 +106,8 @@
             // 
             // lblKuantitas
             // 
-            lblKuantitas.AutoSize = true;
             lblKuantitas.BackColor = SystemColors.ButtonHighlight;
-            lblKuantitas.Location = new Point(366, 24);
+            lblKuantitas.Location = new Point(367, 24);
             lblKuantitas.Name = "lblKuantitas";
             lblKuantitas.Size = new Size(25, 20);
             lblKuantitas.TabIndex = 6;

@@ -134,38 +134,35 @@
             // 
             // lblNoTelp
             // 
-            lblNoTelp.AutoSize = true;
             lblNoTelp.BackColor = Color.Pink;
             lblNoTelp.Font = new Font("Segoe UI", 6F);
             lblNoTelp.ForeColor = SystemColors.ButtonHighlight;
             lblNoTelp.Location = new Point(53, 133);
             lblNoTelp.Name = "lblNoTelp";
-            lblNoTelp.Size = new Size(65, 12);
+            lblNoTelp.Size = new Size(191, 12);
             lblNoTelp.TabIndex = 19;
             lblNoTelp.Text = "628123456789";
             // 
             // lblEmailUser
             // 
-            lblEmailUser.AutoSize = true;
             lblEmailUser.BackColor = Color.Pink;
             lblEmailUser.Font = new Font("Segoe UI", 6F);
             lblEmailUser.ForeColor = SystemColors.ButtonHighlight;
             lblEmailUser.Location = new Point(53, 121);
             lblEmailUser.Name = "lblEmailUser";
-            lblEmailUser.Size = new Size(99, 12);
+            lblEmailUser.Size = new Size(191, 12);
             lblEmailUser.TabIndex = 18;
             lblEmailUser.Text = "rabvinna@gmail.com";
             lblEmailUser.Click += label1_Click;
             // 
             // lblNamaUser
             // 
-            lblNamaUser.AutoSize = true;
             lblNamaUser.BackColor = Color.Pink;
             lblNamaUser.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNamaUser.ForeColor = SystemColors.ButtonHighlight;
             lblNamaUser.Location = new Point(53, 104);
             lblNamaUser.Name = "lblNamaUser";
-            lblNamaUser.Size = new Size(116, 17);
+            lblNamaUser.Size = new Size(191, 17);
             lblNamaUser.TabIndex = 14;
             lblNamaUser.Text = "Rabvinna Salsabila";
             // 
@@ -262,7 +259,6 @@
             Name = "HomePageCustomer";
             Text = "HomePageCustomer";
             panelMenu.ResumeLayout(false);
-            panelMenu.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

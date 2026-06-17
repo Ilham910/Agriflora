@@ -1,4 +1,5 @@
 ﻿using Agriflora.Controllers;
+using Agriflora.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace Agriflora.Views
         {
             InitializeComponent();
             LoadPesanan();
+            LoadUserInfo();
         }
 
 
@@ -55,6 +57,17 @@ namespace Agriflora.Views
                 flowLayoutPanel.Controls.Add(card);
             }
 
+        }
+
+        private void LoadUserInfo()
+        {
+            var user = AppSession.CurrentUser;
+            if (user != null)
+            {
+                lblNamaUser.Text = user.Nama;
+                lblEmailUser.Text = user.Email;
+                lblNoTelp.Text = user.NoTelepon;
+            }
         }
 
         private string GetNamaPengguna(int id)
@@ -136,6 +149,12 @@ namespace Agriflora.Views
         {
             this.Hide();
             new FormLaporanFlorist().Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new FormLogin().Show();
+            this.Close();
         }
     }
 }

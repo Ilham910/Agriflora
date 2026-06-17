@@ -46,6 +46,10 @@
             lblDashboard = new Label();
             lblPesanan = new Label();
             lblLaporan = new Label();
+            btnLogout = new Button();
+            lblNoTelp = new Label();
+            lblEmailUser = new Label();
+            lblNamaUser = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvSemua).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvBunga).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvBibit).BeginInit();
@@ -217,6 +221,52 @@
             lblLaporan.TabIndex = 13;
             lblLaporan.Click += lblLaporan_Click;
             // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.LemonChiffon;
+            btnLogout.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Location = new Point(34, 546);
+            btnLogout.Name = "btnLogout";
+            btnLogout.RightToLeft = RightToLeft.No;
+            btnLogout.Size = new Size(78, 29);
+            btnLogout.TabIndex = 18;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // lblNoTelp
+            // 
+            lblNoTelp.BackColor = Color.PaleVioletRed;
+            lblNoTelp.Font = new Font("Segoe UI", 6F);
+            lblNoTelp.ForeColor = SystemColors.ButtonHighlight;
+            lblNoTelp.Location = new Point(69, 125);
+            lblNoTelp.Name = "lblNoTelp";
+            lblNoTelp.Size = new Size(110, 12);
+            lblNoTelp.TabIndex = 22;
+            lblNoTelp.Text = "628123456789";
+            // 
+            // lblEmailUser
+            // 
+            lblEmailUser.BackColor = Color.PaleVioletRed;
+            lblEmailUser.Font = new Font("Segoe UI", 6F);
+            lblEmailUser.ForeColor = SystemColors.ButtonHighlight;
+            lblEmailUser.Location = new Point(69, 113);
+            lblEmailUser.Name = "lblEmailUser";
+            lblEmailUser.Size = new Size(110, 12);
+            lblEmailUser.TabIndex = 21;
+            lblEmailUser.Text = "rabvinna@gmail.com";
+            // 
+            // lblNamaUser
+            // 
+            lblNamaUser.BackColor = Color.PaleVioletRed;
+            lblNamaUser.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNamaUser.ForeColor = SystemColors.ButtonHighlight;
+            lblNamaUser.Location = new Point(69, 96);
+            lblNamaUser.Name = "lblNamaUser";
+            lblNamaUser.Size = new Size(110, 17);
+            lblNamaUser.TabIndex = 20;
+            lblNamaUser.Text = "Rabvinna Salsabila";
+            // 
             // HomePageFlorist
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -224,6 +274,10 @@
             BackgroundImage = Properties.Resources.HomepageFlorist;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 578);
+            Controls.Add(lblNoTelp);
+            Controls.Add(lblEmailUser);
+            Controls.Add(lblNamaUser);
+            Controls.Add(btnLogout);
             Controls.Add(lblLaporan);
             Controls.Add(lblPesanan);
             Controls.Add(lblDashboard);
@@ -263,5 +317,9 @@
         private Label lblDashboard;
         private Label lblPesanan;
         private Label lblLaporan;
+        private Button btnLogout;
+        private Label lblNoTelp;
+        private Label lblEmailUser;
+        private Label lblNamaUser;
     }
 }

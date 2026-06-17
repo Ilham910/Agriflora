@@ -1,4 +1,5 @@
 ﻿using Agriflora.Controllers;
+using Agriflora.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace Agriflora.Views
         {
             InitializeComponent();
             LoadLaporan();
+            LoadUserInfo();
         }
 
 
@@ -82,6 +84,17 @@ namespace Agriflora.Views
             }
         }
 
+        private void LoadUserInfo()
+        {
+            var user = AppSession.CurrentUser;
+            if (user != null)
+            {
+                lblNamaUser.Text = user.Nama;
+                lblEmailUser.Text = user.Email;
+                lblNoTelp.Text = user.NoTelepon;
+            }
+        }
+
         private void lblLaporan_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -98,6 +111,12 @@ namespace Agriflora.Views
         {
             this.Hide();
             new FormPesananFlorist().Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new FormLogin().Show();
+            this.Close();
         }
     }
 }
