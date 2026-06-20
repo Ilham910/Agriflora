@@ -51,7 +51,6 @@
             // 
             // lblCustomer
             // 
-            lblCustomer.AutoSize = true;
             lblCustomer.BackColor = SystemColors.ButtonHighlight;
             lblCustomer.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCustomer.Location = new Point(119, 13);
@@ -82,14 +81,14 @@
             // 
             // lblTotal
             // 
-            lblTotal.AutoSize = true;
             lblTotal.BackColor = SystemColors.ButtonHighlight;
             lblTotal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(362, 17);
+            lblTotal.Location = new Point(349, 18);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(94, 20);
+            lblTotal.Size = new Size(118, 20);
             lblTotal.TabIndex = 8;
             lblTotal.Text = "Rp. 177.000";
+            lblTotal.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblTanggal
             // 

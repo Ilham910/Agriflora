@@ -47,7 +47,7 @@
             // 
             // btnRegister
             // 
-            btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnRegister.BackColor = Color.PaleVioletRed;
             btnRegister.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = SystemColors.ButtonHighlight;
